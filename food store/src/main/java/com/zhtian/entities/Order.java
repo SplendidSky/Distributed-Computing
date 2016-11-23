@@ -9,22 +9,20 @@ import java.util.Set;
  * Created by Administrator on 2016/11/23.
  */
 public class Order {
-    private Integer id = null;
+    private static int _id = 0;
+    private int id;
     private Calendar date = null;
     private Set<OrderLine> orderLines = new LinkedHashSet<OrderLine>();
 
     public Order() {
         super();
+        this.id = _id++;
     }
 
-
-    public Integer getId() {
+    public static int getCurrentOrderId() { return _id; }
+    public int getId() {
         return this.id;
     }
-    public void setId(final Integer id) {
-        this.id = id;
-    }
-
 
     public Calendar getDate() {
         return this.date;

@@ -4,14 +4,15 @@ package com.zhtian.entities;
  * Created by Administrator on 2016/11/23.
  */
 public class Food {
+    private static int _id = 0;
     private int id;
     private String name;
     private double cost;
     private String src;
 
     public Food() {}
-    public Food(int id, String name, double cost, String src) {
-        this.id = id;
+    public Food(String name, double cost, String src) {
+        this.id = _id++;
         this.name = name;
         this.cost = cost;
         this.src = src;
@@ -19,10 +20,6 @@ public class Food {
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {

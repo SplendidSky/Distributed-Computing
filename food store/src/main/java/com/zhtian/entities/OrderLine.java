@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 public class OrderLine {
     private Food food = null;
     private Integer amount = null;
-    private BigDecimal purchasePrice = null;
-
 
     public OrderLine() {
         super();
@@ -31,11 +29,4 @@ public class OrderLine {
         this.amount = amount;
     }
 
-
-    public BigDecimal getPurchasePrice() {
-        return this.purchasePrice;
-    }
-    public void setPurchasePrice(final BigDecimal purchasePrice) {
-        this.purchasePrice = purchasePrice;
-    }
 }

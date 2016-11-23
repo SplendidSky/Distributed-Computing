@@ -25,11 +25,11 @@ public class FoodRepository {
 
         foodsById = new LinkedHashMap<Integer, Food>();
 
-        final Food food1 = new Food(1, "food1", 1.0, "/images/staple-1.png");
-        final Food food2 = new Food(2, "food2", 2.0, "/images/staple-2.png");
+        final Food food1 = new Food("Staple1", 1.0, "/images/staple-1.png");
+        final Food food2 = new Food("Staple2", 2.0, "/images/staple-2.png");
 
-        foodsById.put(Integer.valueOf(food1.getId()), food1);
-        foodsById.put(Integer.valueOf(food2.getId()), food2);
+        foodsById.put(food1.getId(), food1);
+        foodsById.put(food2.getId(), food2);
     }
 
     public List<Food> findAll() {

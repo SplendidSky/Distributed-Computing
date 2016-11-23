@@ -1,9 +1,9 @@
-C:\Users\Administrator\Desktop\Junior\分布式计算\MVC_test\src\main\java\com\zhtian\entities\OrderLine.java
-C:\Users\Administrator\Desktop\Junior\分布式计算\MVC_test\src\main\java\com\zhtian\entities\User.java
-C:\Users\Administrator\Desktop\Junior\分布式计算\MVC_test\src\main\java\com\zhtian\entities\repositories\FoodRepository.java
-C:\Users\Administrator\Desktop\Junior\分布式计算\MVC_test\src\main\java\com\zhtian\web\controller\OrderController.java
-C:\Users\Administrator\Desktop\Junior\分布式计算\MVC_test\src\main\java\com\zhtian\web\controller\FoodDetailController.java
-C:\Users\Administrator\Desktop\Junior\分布式计算\MVC_test\src\main\java\com\zhtian\web\controller\MenuController.java
-C:\Users\Administrator\Desktop\Junior\分布式计算\MVC_test\src\main\java\com\zhtian\entities\Food.java
-C:\Users\Administrator\Desktop\Junior\分布式计算\MVC_test\src\main\java\com\zhtian\web\controller\HomeController.java
-C:\Users\Administrator\Desktop\Junior\分布式计算\MVC_test\src\main\java\com\zhtian\entities\Order.java
+C:\Users\Administrator\Desktop\Junior\分布式计算\food store\src\main\java\com\zhtian\entities\repositories\FoodRepository.java
+C:\Users\Administrator\Desktop\Junior\分布式计算\food store\src\main\java\com\zhtian\web\controller\FoodDetailController.java
+C:\Users\Administrator\Desktop\Junior\分布式计算\food store\src\main\java\com\zhtian\web\controller\HomeController.java
+C:\Users\Administrator\Desktop\Junior\分布式计算\food store\src\main\java\com\zhtian\entities\OrderLine.java
+C:\Users\Administrator\Desktop\Junior\分布式计算\food store\src\main\java\com\zhtian\web\controller\OrderController.java
+C:\Users\Administrator\Desktop\Junior\分布式计算\food store\src\main\java\com\zhtian\entities\Food.java
+C:\Users\Administrator\Desktop\Junior\分布式计算\food store\src\main\java\com\zhtian\entities\User.java
+C:\Users\Administrator\Desktop\Junior\分布式计算\food store\src\main\java\com\zhtian\entities\Order.java
+C:\Users\Administrator\Desktop\Junior\分布式计算\food store\src\main\java\com\zhtian\web\controller\MenuController.java
