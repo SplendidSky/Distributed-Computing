@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>您的订单</title>
+    <link rel="stylesheet" type="text/css" href="./res/order.css">
+    <script type="text/javascript" src="./res/order.js"></script>
+</head>
+<body>
+    <div class="header">
+        <img src="./res/img/m.jpg" class="img-header">
+        <span class="text-header">订单详情</span>
+    </div>
+    <div class="order">
+        <table class="table border-bt-2">
+            <thead>
+                <tr class="border-bt-1">
+                    <th class="order-head">订单</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th class="order-head">总价</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- 注：
+                        orders: 已订食物数组;
+                        order {
+                            count: 该食物数量
+                            name:名称
+                            cost:价格
+                            src:图片相对地址, 如"staple-1.PNG"
+                        }
+                     -->
+                    <td class="count-column" th:each="order : ${orders}">
+                            <button class="btn black font">数量</button>
+                            <button class="count font" th:text=${order.count}>3</div>
+                    </td>
+                    <td class="picture-column">
+                        <img src="./res/img/order-img-1-1.png" th:src="(@{./res/img/{foodUrl}(foodUrl=$(order.src))})">
+                    </td>
+                    <td class="description-column" th:text="${order.name}">
+                        原味板烧鸡腿堡
+                    </td>
+                    <td class="cost-column font-gray">
+                        ￥<span th:text="${order.cost}">18.00</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="footer">
+        <button class="btn red btn-radius font mg-tp-10">返回菜单</button>
+        <button class="btn black btn-radius font mg-tp-10">登出</button>
+    </div>
+</body>
+</html>

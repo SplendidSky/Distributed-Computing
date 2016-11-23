@@ -1,0 +1,100 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>me.database</groupId>
+  <artifactId>jdbc-basic</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>jdbc-basic</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    
+    <!-- spring -->
+    <springframework.version>4.3.3.RELEASE</springframework.version>
+    
+    <!-- persistence -->
+	<mysql-connector-java.version>5.1.38</mysql-connector-java.version>
+	<datasource-dbcp.version>7.0.65</datasource-dbcp.version>
+	<!-- util -->
+	<guava.version>17.0</guava.version>
+  </properties>
+  
+  <build>
+    <plugins>
+	  <plugin>
+	    <!-- 参考 http://blog.csdn.net/bluishglc/article/details/7622286 -->
+	    <!-- 执行 mvn exec:java -->
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>exec-maven-plugin</artifactId>
+		<version>1.2.1</version>
+		<executions>
+		  <execution>
+			<goals>
+			  <goal>java</goal>
+			</goals>
+		  </execution>
+		</executions>
+		<configuration>
+		  <mainClass>me.database.jdbc_basic.BestPracticeJdbc</mainClass>
+		</configuration>
+	  </plugin>
+    </plugins>
+  </build> 
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <!-- spring -->
+    <dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>${springframework.version}</version>
+	</dependency>
+	    <dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-orm</artifactId>
+		<version>${springframework.version}</version>
+	</dependency>  
+	
+	<!-- https://mvnrepository.com/artifact/javax.persistence/persistence-api -->
+	<!-- ORM Api / include in Hibernate -->
+	<dependency>
+	    <groupId>javax.persistence</groupId>
+	    <artifactId>persistence-api</artifactId>
+	    <version>1.0</version>
+	</dependency>
+
+	<!-- persistence -->    
+    <dependency>
+	  <groupId>mysql</groupId>
+	  <artifactId>mysql-connector-java</artifactId>
+	  <version>${mysql-connector-java.version}</version>
+	  <scope>runtime</scope>
+	</dependency>
+ 
+ 	<!-- utils -->
+	<dependency>
+		<groupId>com.google.guava</groupId>
+		<artifactId>guava</artifactId>
+		<version>${guava.version}</version>
+	</dependency>
+	
+	<!-- data source -->
+	<dependency>
+		<groupId>org.apache.tomcat</groupId>
+		<artifactId>tomcat-dbcp</artifactId>
+		<version>${datasource-dbcp.version}</version>
+	</dependency>
+    
+  </dependencies>
+  
+</project>

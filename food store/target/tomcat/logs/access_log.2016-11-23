@@ -1,0 +1,6 @@
+0:0:0:0:0:0:0:1 - - [23/Nov/2016:14:46:28 +0800] "GET /food_store HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [23/Nov/2016:14:46:31 +0800] "GET /food_store/ HTTP/1.1" 200 230 http-bio-8080-exec-2 2005
+0:0:0:0:0:0:0:1 - - [23/Nov/2016:14:46:32 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [23/Nov/2016:14:46:41 +0800] "GET /food_store/menu HTTP/1.1" 200 4278 http-bio-8080-exec-4 32
+0:0:0:0:0:0:0:1 - - [23/Nov/2016:14:46:41 +0800] "GET /food_store/css/menu.css HTTP/1.1" 304 - http-bio-8080-exec-5 14
+0:0:0:0:0:0:0:1 - - [23/Nov/2016:14:46:43 +0800] "GET /food_store/details?food=1 HTTP/1.1" 200 2051 http-bio-8080-exec-6 24

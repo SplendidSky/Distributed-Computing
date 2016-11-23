@@ -1,0 +1,4 @@
+me\database\config\PersistenceJPAConfig.class
+me\database\business\model\Bar.class
+me\database\jdbc_basic\UglyJdbc.class
+me\database\business\model\Foo.class

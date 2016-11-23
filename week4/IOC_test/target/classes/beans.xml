@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="springQuizMaster" class="IOC_test.IOC_test.SpringQuizMaster"></bean>
+	<bean id="strutsQuizMaster" class="IOC_test.IOC_test.StrutsQuizMaster"></bean>
+	<bean id="quizMasterService" class="IOC_test.IOC_test.QuizMasterService">
+		<property name="quizMaster">
+			<ref bean="springQuizMaster" />
+		</property>
+	</bean>
+</beans>

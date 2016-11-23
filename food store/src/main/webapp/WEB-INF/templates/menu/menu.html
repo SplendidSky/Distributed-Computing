@@ -1,0 +1,135 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>菜单</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="../../../../css/menu.css"  th:href="@{/css/menu.css}">
+</head>
+<body>
+	<div class="header">
+        <img src="../../../images/m.jpg" th:src="@{/images/m.jpg}" class="img-header">
+        <span class="text-header">菜单</span>
+    </div>
+    <div id="menu">
+		<div class="menu">
+		<!-- 注：
+			foods: food类数组;
+			food: {
+				name:名字
+				cost:价格
+				src:图片相对地址, 如"./res/img/staple-1.PNG"
+			}
+		 -->
+			<div class="item" th:each="food : ${foods}">
+				<a  href="http://www.baidu.com" th:href="@{/details(food=${food.id})}" class="item_body">
+					<img src="../../../images/staple-1.png" th:src="@{${food.src}}" class="item_img">
+					<p class="item_name" th:text="${food.name}">板烧鸡腿堡</p>
+				</a>
+				<div class="item_footer">
+					<button class="btn red btn-radius font">添加</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+ 	<div class="footer">
+        <button class="btn red btn-radius font mg-tp-10">请登录，再点餐</button>
+    </div>
+</body>
+</html>
+
+
+<!-- <div class="menu">
+			<p class="item_title">主食</p>
+			<div class="item">
+				<div class="item_body">
+					<img src="./res/img/staple-1.PNG" class="item_img">
+					<p class="item_name">板烧鸡腿堡</p>
+				</div>
+				<div class="item_footer">
+					<button class="btn red btn-radius font">添加</button>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_body">
+					<img src="./res/img/staple-2.PNG" class="item_img">
+					<p class="item_name">麦辣鸡腿堡</p>
+				</div>
+				<div class="item_footer">
+					<button class="btn red btn-radius font">添加</button>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_body">
+					<img src="./res/img/staple-3.PNG" class="item_img">
+					<p class="item_name">麦香鱼</p>
+				</div>
+				<div class="item_footer">
+					<button class="btn red btn-radius font">添加</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="menu">
+			<p class="item_title">饮品</p>
+			<div class="item">
+				<div class="item_body">
+					<img src="./res/img/drink-1.PNG" class="item_img">
+					<p class="item_name">青柠口味奇乐酷</p>
+				</div>
+				<div class="item_footer">
+					<button class="btn red btn-radius font">添加</button>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_body">
+					<img src="./res/img/drink-2.PNG" class="item_img">
+					<p class="item_name">可乐</p>
+				</div>
+				<div class="item_footer">
+					<button class="btn red btn-radius font">添加</button>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_body">
+					<img src="./res/img/drink-3.PNG" class="item_img">
+					<p class="item_name">雪碧</p>
+				</div>
+				<div class="item_footer">
+					<button class="btn red btn-radius font">添加</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="menu">
+			<p class="item_title">套餐</p>
+			<div class="item">
+				<div class="item_body">
+					<img src="./res/img/set-1.PNG" class="item_img">
+					<p class="item_name">麦趣鸡盒</p>
+				</div>
+				<div class="item_footer">
+					<button class="btn red btn-radius font">添加</button>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_body">
+					<img src="./res/img/set-2.PNG" class="item_img">
+					<p class="item_name">麦乐家庭餐</p>
+				</div>
+				<div class="item_footer">
+					<button class="btn red btn-radius font">添加</button>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_body">
+					<img src="./res/img/set-3.PNG" class="item_img">
+					<p class="item_name">5人欢享盛宴餐</p>
+				</div>
+				<div class="item_footer">
+					<button class="btn red btn-radius font">添加</button>
+				</div>
+			</div>
+		</div>
+    </div> -->

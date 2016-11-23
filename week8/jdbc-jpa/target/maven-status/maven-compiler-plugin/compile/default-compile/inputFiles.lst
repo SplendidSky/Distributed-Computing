@@ -1,0 +1,7 @@
+D:\workspace\database\jdbc-jpa\src\main\java\me\database\persistence\dao\FooDao.java
+D:\workspace\database\jdbc-jpa\src\main\java\me\database\persistence\model\Foo.java
+D:\workspace\database\jdbc-jpa\src\main\java\me\database\persistence\model\Bar.java
+D:\workspace\database\jdbc-jpa\src\main\java\me\database\config\PersistenceJPAConfig.java
+D:\workspace\database\jdbc-jpa\src\main\java\me\database\persistence\dao\AbstractJpaDAO.java
+D:\workspace\database\jdbc-jpa\src\main\java\me\database\jdbc_jpa\App.java
+D:\workspace\database\jdbc-jpa\src\main\java\me\database\persistence\dao\IFooDao.java
