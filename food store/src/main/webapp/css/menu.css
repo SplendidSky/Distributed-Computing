@@ -21,6 +21,9 @@ body {
     width: 200px;
 }
 
+a {
+    text-decoration: none;
+}
 
 img {
     width: 170px;
@@ -73,7 +76,7 @@ img {
 }
 
 #menu {
-	width: 540px;
+	width: 700px;
 	margin: 0 auto 0px auto;
     text-align: center;
 	border-collapse: collapse;
@@ -82,9 +85,6 @@ img {
     padding-bottom: 80px;
 }
 
-.menu {
-    width: 700px;
-}
 
 .item {
     width: 172px;
@@ -120,4 +120,12 @@ img {
     background-image: linear-gradient(#f3f3f3,#fff 15px,#fff);
     border-top: 1px solid #ddd;
     border-radius: 0 0 4px 4px;
+}
+
+.count {
+    width: 40px;
+    height: 35px;
+    line-height: 35px;
+    background-color: white;
+    border: 1px solid #525252;
 }

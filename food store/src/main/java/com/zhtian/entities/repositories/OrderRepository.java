@@ -26,8 +26,8 @@ public class OrderRepository {
     private OrderRepository() {
 
         super();
-
         this.ordersById = new LinkedHashMap<Integer, Order>();
+        addNewOrder();
 
     }
 

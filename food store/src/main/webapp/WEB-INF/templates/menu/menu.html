@@ -4,7 +4,9 @@
 <head>
 	<title>菜单</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="../../../../css/menu.css"  th:href="@{/css/menu.css}">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css"  th:href="@{/css/menu.css}">
+	<script type="text/javascript" src="../../../js/jquery.js" th:src="@{/js/jquery.js}"></script>
+	<script type="text/javascript" src="../../../js/menu.js" th:src="@{/js/menu.js}"></script>
 </head>
 <body>
 	<div class="header">
@@ -21,20 +23,32 @@
 				src:图片相对地址, 如"./res/img/staple-1.PNG"
 			}
 		 -->
+
+		 <!-- 
+			commit-order {
+				commits[] : 数组;
+				commit: {
+					food_id: 食物id
+					amount:  总数
+				}
+			}
+		  -->
 			<div class="item" th:each="food : ${foods}">
 				<a  href="http://www.baidu.com" th:href="@{/details(food=${food.id})}" class="item_body">
-					<img src="../../../images/staple-1.png" th:src="@{${food.src}}" class="item_img">
+					<img th:src="@{${food.src}}" class="item_img">
 					<p class="item_name" th:text="${food.name}">板烧鸡腿堡</p>
 				</a>
-				<div class="item_footer">
-					<button class="btn red btn-radius font">添加</button>
+				<div th:id="${food.id}" class="item_footer">
+					<button class="plus btn black font">+</button>
+					<button class="amount count font">0</button>
+					<button class="minus btn black font">-</button>
 				</div>
 			</div>
 
 		</div>
 	</div>
  	<div class="footer">
-        <button class="btn red btn-radius font mg-tp-10">请登录，再点餐</button>
+        <button id="commit" class="btn red btn-radius font mg-tp-10">提交订单(登录)</button>
     </div>
 </body>
 </html>

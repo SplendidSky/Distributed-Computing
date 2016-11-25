@@ -1,0 +1,9 @@
+127.0.0.1 - - [25/Nov/2016:23:58:45 +0800] "GET /food_store/js/jquery.js HTTP/1.1" 304 - http-bio-8080-exec-2 18
+127.0.0.1 - - [25/Nov/2016:23:58:45 +0800] "GET /food_store/js/menu.js HTTP/1.1" 304 - http-bio-8080-exec-3 16
+127.0.0.1 - - [25/Nov/2016:23:58:45 +0800] "GET /food_store/menu HTTP/1.1" 200 4784 http-bio-8080-exec-1 834
+127.0.0.1 - - [25/Nov/2016:23:58:45 +0800] "GET /food_store/images/m.jpg HTTP/1.1" 304 - http-bio-8080-exec-5 6
+127.0.0.1 - - [25/Nov/2016:23:58:45 +0800] "GET /food_store/css/menu.css HTTP/1.1" 304 - http-bio-8080-exec-6 18
+127.0.0.1 - - [25/Nov/2016:23:58:45 +0800] "GET /food_store/images/staple-1.png HTTP/1.1" 304 - http-bio-8080-exec-7 7
+127.0.0.1 - - [25/Nov/2016:23:58:45 +0800] "GET /food_store/images/staple-2.png HTTP/1.1" 304 - http-bio-8080-exec-9 3
+0:0:0:0:0:0:0:1 - - [25/Nov/2016:23:59:48 +0800] "POST /food_store/menu/commit HTTP/1.1" 200 2049 http-bio-8080-exec-2 54
+0:0:0:0:0:0:0:1 - - [25/Nov/2016:23:59:55 +0800] "GET /food_store/order?orderId=1 HTTP/1.1" 200 2960 http-bio-8080-exec-2 28

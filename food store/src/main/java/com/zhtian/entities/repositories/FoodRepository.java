@@ -38,4 +38,12 @@ public class FoodRepository {
 
     public Food findById(final int id) { return foodsById.get(id); }
 
+    public int findIdByName(String name) {
+        for (int i = 0; i < foodsById.size(); i++) {
+            if (foodsById.get(i).getName().equals(name))
+                return foodsById.get(i).getId();
+        }
+        return -1;
+    }
+
 }
