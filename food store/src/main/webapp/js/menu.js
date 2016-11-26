@@ -30,12 +30,11 @@ $(document).ready(function(){
             type: "POST",
             url: "menu/commit",
             contentType: "application/json",
-            dataType: "json",
             data: JSON.stringify({
                 "commits": array
             }),
-            success: function (jsonResult) {
-                alert(jsonResult);
+            success: function (id) {
+                window.location.href = "/food_store/order?orderId="+id;
             }
         });
 

@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import sun.net.www.http.HttpClient;
 
 import java.util.List;
@@ -32,7 +33,8 @@ public class MenuController {
     }
 
     @RequestMapping(value = "/commit", method = RequestMethod.POST)
-    public String commit(@RequestBody String commit_data, Model model) {
+    @ResponseBody
+    public int commit(@RequestBody String commit_data, Model model) {
         OrderRepository orderRepository = OrderRepository.getInstance();
         FoodRepository foodRepository = FoodRepository.getInstance();
         Order currentOrder = orderRepository.getCurrentOrder();
@@ -57,8 +59,7 @@ public class MenuController {
         orderRepository.addNewOrder();
 
         model.addAttribute("orderlines", currentOrder.getOrderLines());
-//        return "order-form/order-form";
-        return "home/home";
+        return currentOrder.getId();
     }
 
 }
