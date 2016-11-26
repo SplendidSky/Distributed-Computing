@@ -20,7 +20,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr th:each="orderline : ${orderlines}">
+                <tr th:each="orderline : ${order.orderlines}">
                     <!-- 注：
                         orders: 已订食物数组;
                         order {
@@ -48,8 +48,10 @@
         </table>
     </div>
     <div class="footer">
-        <button class="btn red btn-radius font mg-tp-10">返回菜单</button>
-        <button class="btn black btn-radius font mg-tp-10">登出</button>
+        <a href="/food_store/menu/menu.html" th:href="@{/menu}">
+            <button class="btn red btn-radius font mg-tp-10">返回菜单</button>
+        </a>
+            <button class="btn black btn-radius font mg-tp-10">登出</button>
     </div>
 </body>
 </html>

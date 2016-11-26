@@ -145,11 +145,11 @@ a {
     border-radius: 5px;
 }
 
-#login-form {
+#form-container {
     position: absolute;
     width: 270px;
-    height: 370px;
-    top: 40px;
+    height: 200px;
+    top: 120px;
     right: 30px;
     background-color: rgba(255,255,255,0.5);
     z-index: 100;
@@ -170,4 +170,21 @@ a {
 
 #search {
     margin-right: 10px;
+}
+
+form {
+    position: relative;
+    top: 30%;
+    text-align: center;
+}
+
+.input {
+    display: block;
+    width: 180px;
+    height: 25px;
+    margin: 0 auto;
+}
+
+.mg-10 {
+    margin: 10px;
 }

@@ -30,11 +30,17 @@
         <div id="slideshow">
             <img id="bj" class="slide slide-in" src="../../../images/slide-1.jpg" th:src="@{/images/slide-1.jpg}">
             <img id="gd" class="slide" src="../../../images/slide-2.jpg" th:src="@{/images/slide-2.jpg}">
-            <img id="sc" class="slide" src="../../../images/staple-1.png" th:src="@{/images/staple-1.png}">
-            <div id="login-form">
-                <p></p>
-            </div>
+            <img id="sc" class="slide" src="../../../images/staple-1.png" th:src="@{/images/staple-1.png}"> 
+
+            <div id="form-container">
+                <form id="login-form" name="loginForm">
+                    <input class="input" type="text" id="username" placeholder="用户名">
+                    <input class="input" type="password" id="password" placeholder="密码">
+                    <button type="submit" class="btn red btn-radius font mg-10">登录</button>
+                </form>
+            </div>      
             
+
             <div id="select">
                 <input class="radio" type="radio" name="city" value="北京" checked="checked" /> 北京
                 <input class="radio" type="radio" name="city" value="广东" /> 广东
