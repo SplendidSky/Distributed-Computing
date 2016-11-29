@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <title>您的订单</title>
+    <title>所有订单</title>
     <link rel="stylesheet" type="text/css" href="../../../css/order.css"  th:href="@{/css/order.css}">
 </head>
 <body>
     <div class="header">
-        <img src="../../../images/m.jpg" th:src="@{/images/m.jpg}" class="img-header">
+        <a id="m" href="/food_store/home/home.html" th:href="@{/}">
+            <img src="../../../images/m.jpg" th:src="@{/images/m.jpg}" class="img-header">
+        </a>
         <span class="text-header">所有订单</span>
     </div>
     
-    <div class="order" th:each="order : ${orders}">
+    <div id="container">
+        <div class="order" th:each="order : ${orders}">
         <table class="table border-bt-2">
             <thead>
                 <tr class="border-bt-1">
-                    <th class="order-head" th:text="'订单'+ ${order.id}">订单1</th>
+                    <th class="order-head">
+                        <a href="/food_store/menu/menu.html" th:href="@{/order-form(orderId=${order.id})}" th:text="'订单'+ ${order.id}">订单1</a>
+                    </th>
                     <th>&nbsp;</th>
                     <th>&nbsp;</th>
                     <th class="order-head">总价</th>
@@ -39,6 +44,8 @@
             </tbody>
         </table>
     </div>
+    </div>
+    
 
     <div class="footer">
         <a href="/food_store/menu/menu.html" th:href="@{/menu}">

@@ -12,7 +12,9 @@
         <img src="../../../images/m.jpg" th:src="@{/images/m.jpg}" class="img-header">
         <span class="text-header">商品详情</span>
     </div>
-    <div class="order">
+    
+
+    <!-- <div class="order">
         <table class="table border-bt-2">
             <thead>
                 <tr class="border-bt-1">
@@ -23,17 +25,17 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- 注：
+                <! 注：
                     foods: food类数组;
                     Food: {
                         name:名字
                         cost:价格
                         src:图片相对地址, 如"staple-1.PNG"
                     }
-                 -->
-                 <!-- 
+                 
+                 
                     session.user : 当前会话用户
-                  -->
+                 
                 <tr>
                     <td class="count-column">
                             <button class="btn black font">数量</button>
@@ -48,10 +50,22 @@
                 </tr>
             </tbody>
         </table>
+    </div> -->
+
+
+    <div class="details">
+        <div class="pic-name-price">
+            <img class="food-pic" src="../../../images/staple-1.PNG.jpg" th:src="@{${food.src}}">
+            <p class="food-name">原味板烧鸡腿堡</p>
+            <p class="food-price" th:text="'￥'+${food.cost}">￥18</p>
+        </div>
+        <div class="introduction">
+            <p>独特的板烧风味，配以柔和的黑椒香气，回味无穷；经过腌制的鸡肉采用煎或烤的方式至熟，其肉质鲜嫩多汁，风味醇香</p>
+        </div>
     </div>
+
     <div class="footer">
         <button class="btn black btn-radius font mg-tp-10">返回菜单</button>
-		<button class="btn red btn-radius font mg-tp-10">确认购买</button>
     </div>
 </body>
 </html>

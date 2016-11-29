@@ -12,6 +12,11 @@ a {
     height: 35px;
 }
 
+#m {
+    height: 100%;
+    width: 200px;
+}
+
 .header {
     background-color: white;
     position: fixed;
@@ -46,11 +51,6 @@ a {
     color: #f3ac12;
     font-weight: 500;
     font-size: 1.25rem;
-}
-
-.order {
-    position: relative;
-    top: 200px;
 }
 
 .count-column {
@@ -134,4 +134,14 @@ img {
 .font-gray {
     color: #9f9f9f;
     font-size: 1rem;
+}
+
+#container {
+    position: relative;
+    top: 200px;
+    margin-bottom: 70px;
+}
+
+.btn_success {
+    width: 100%;
 }

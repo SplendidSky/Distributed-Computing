@@ -17,13 +17,25 @@ $(document).ready(function(){
 
     $("#commit").click(function() {
         var array = [];
+        var empty = true;
         $(".amount").each(function(index) {
+
+            if ($(this).text() != "0") {
+                console.log($(this).text());
+                empty = false;
+            }
+
             var item = {
                 "food_id": $(this).parent().attr("id"),
                 "amount" : $(this).text()
             };
             array.push(item);
         });
+
+        if (empty) {
+            alert("餐品不能为空!");
+            return;
+        }
 
         //post
         $.ajax({
@@ -33,8 +45,10 @@ $(document).ready(function(){
             data: JSON.stringify({
                 "commits": array
             }),
-            success: function (id) {
-                window.location.href = "/food_store/order-form?orderId="+id;
+            success: function () {
+                // window.location.href = "/food_store/order-form?orderId="+id;
+                window.location.href = "/food_store/order";
+                console.log(1);
             }
         });
 
