@@ -27,15 +27,7 @@ $(document).ready(function() {
 
     $("#search-bt").click(function() {
         var value = $("#search").val();
-        var href = "";
-        switch (value) {
-            case "鸡腿堡":
-                href="../food/food.html";
-                break;
-        }
-        if (href == "") {
-            alert("没有该菜品");
-        }
+        var href = "/food_store/?keyword=" + value;
         window.location.href = href;
     });
 });
