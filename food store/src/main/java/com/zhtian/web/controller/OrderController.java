@@ -5,22 +5,22 @@ import com.zhtian.entities.repositories.OrderRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 /**
- * Created by Administrator on 2016/11/21.
+ * Created by Administrator on 2016/11/28.
  */
+
 @Controller
+@RequestMapping("/order")
 public class OrderController {
-    @RequestMapping("/order")
-    public String menu(@RequestParam(value="orderId", required = false) Integer orderId, Model model) {
+    @RequestMapping("")
+    public String orders(Model model) {
         OrderRepository orderRepository = OrderRepository.getInstance();
-        Order order;
-        if (orderId == null)
-            order = orderRepository.getCurrentOrder();
-        else
-            order = orderRepository.findById(orderId);
-        model.addAttribute("orderlines", order.getOrderLines());
-        return "order-form/order-form";
+        List<Order> orderList = orderRepository.findAll();
+        orderList.remove(orderList.size() - 1);
+        model.addAttribute("orders", orderList);
+        return "order/order";
     }
 }

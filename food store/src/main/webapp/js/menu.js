@@ -34,7 +34,7 @@ $(document).ready(function(){
                 "commits": array
             }),
             success: function (id) {
-                window.location.href = "/food_store/order?orderId="+id;
+                window.location.href = "/food_store/order-form?orderId="+id;
             }
         });
 

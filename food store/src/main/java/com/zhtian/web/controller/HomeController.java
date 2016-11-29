@@ -1,5 +1,6 @@
 package com.zhtian.web.controller;
 
+import com.zhtian.entities.Food;
 import com.zhtian.entities.repositories.FoodRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,8 +25,12 @@ public class HomeController {
                 return "home/home";
             }
             else {
-                return "/food/food?foodId=" + foodId;
+                Food food = foodRepository.findById(foodId);
+                model.addAttribute("food", food);
+                return "food/food";
             }
         }
     }
+
+
 }

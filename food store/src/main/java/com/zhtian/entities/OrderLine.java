@@ -29,4 +29,6 @@ public class OrderLine {
         this.amount = amount;
     }
 
+    public Double getProduct() { return food.getCost() * amount; }
+
 }

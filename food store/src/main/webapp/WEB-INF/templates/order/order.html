@@ -21,19 +21,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr th:each="orderline : ${order.orderlines}">
+                <tr th:each="orderline : ${order.getOrderLines()}">
                     <td class="count-column">
                             <button class="btn black font">数量</button>
-                            <button class="count font" th:text=${orderline.amount}>3</button>
+                            <button class="count font" th:text=${orderline.getAmount()}>3</button>
                     </td>
                     <td class="picture-column">
-                        <img src="../../../images/staple-1.png" th:src="@{${orderline.food.src}}">
+                        <img src="../../../images/staple-1.png" th:src="@{${orderline.getFood().getSrc()}}">
                     </td>
-                    <td class="description-column" th:text="${orderline.food.name}">
+                    <td class="description-column" th:text="${orderline.getFood().getName()}">
                         原味板烧鸡腿堡
                     </td>
                     <td class="cost-column font-gray">
-                        ￥<span th:text="${orderline.food.cost * orderline.amount}">18.00</span>
+                        ￥<span th:text="${orderline.getProduct()}">18.00</span>
                     </td>
                 </tr>
             </tbody>

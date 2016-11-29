@@ -11,7 +11,6 @@ import java.util.Set;
 public class Order {
     private static int _id = 1;
     private int id;
-    private Calendar date = null;
     private Set<OrderLine> orderLines;
 
     public Order() {
@@ -25,12 +24,6 @@ public class Order {
         return this.id;
     }
 
-    public Calendar getDate() {
-        return this.date;
-    }
-    public void setDate(final Calendar date) {
-        this.date = date;
-    }
 
 
     public Set<OrderLine> getOrderLines() {
