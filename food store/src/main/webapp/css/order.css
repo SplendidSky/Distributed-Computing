@@ -141,3 +141,7 @@ img {
     top: 200px;
     margin-bottom: 70px;
 }
+
+.btn_success {
+    width: 100%;
+}

@@ -8,4 +8,5 @@ com\zhtian\web\controller\OrderFormController.class
 com\zhtian\web\controller\OrderController.class
 com\zhtian\web\controller\HomeController.class
 com\zhtian\web\controller\MenuController.class
+com\zhtian\entities\User.class
 com\zhtian\entities\repositories\FoodRepository.class

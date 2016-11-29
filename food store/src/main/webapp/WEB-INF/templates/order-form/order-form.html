@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="../../../css/order.css"  th:href="@{/css/order.css}">
 </head>
 <body>
-    <div class="header">
+    <!-- <div class="header">
         <a id="m" href="/food_store/home/home.html" th:href="@{/home}">
             <img src="../../../images/m.jpg" th:src="@{/images/m.jpg}" class="img-header">
         </a>
@@ -22,7 +22,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr th:each="orderline : ${orderlines}">
+                <tr th:each="orderline : ${orderlines}"> -->
                     <!-- 注：
                         orders: 已订食物数组;
                         order {
@@ -32,7 +32,7 @@
                             food.src:图片相对地址, 如"staple-1.PNG"
                         }
                      -->
-                    <td class="count-column">
+                    <!-- <td class="count-column">
                             <button class="btn black font">数量</button>
                             <button class="count font" th:text=${orderline.amount}>3</button>
                     </td>
@@ -49,11 +49,11 @@
             </tbody>
         </table>
     </div>
-    <div class="footer">
-        <a href="/food_store/home/home.html" th:href="@{/}">
-            <button class="btn red btn-radius font mg-tp-10">下单成功，返回首页</button>
+    <div class="footer"> -->
+        <a class="btn_success" href="/food_store/home/home.html" th:href="@{/}">
+            <button class="btn red btn-radius font mg-tp-10" style="width: 100%">下单成功，返回首页</button>
         </a>
-            <button class="btn black btn-radius font mg-tp-10">登出</button>
-    </div>
+            <!-- <button class="btn black btn-radius font mg-tp-10">登出</button>
+    </div> -->
 </body>
 </html>

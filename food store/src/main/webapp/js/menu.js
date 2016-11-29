@@ -47,7 +47,7 @@ $(document).ready(function(){
             }),
             success: function () {
                 // window.location.href = "/food_store/order-form?orderId="+id;
-                // window.location.href = "/food_store/order";
+                window.location.href = "/food_store/order";
                 console.log(1);
             }
         });
