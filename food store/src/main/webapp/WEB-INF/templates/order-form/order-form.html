@@ -6,7 +6,9 @@
 </head>
 <body>
     <div class="header">
-        <img src="../../../images/m.jpg" th:src="@{/images/m.jpg}" class="img-header">
+        <a id="m" href="/food_store/home/home.html" th:href="@{/home}">
+            <img src="../../../images/m.jpg" th:src="@{/images/m.jpg}" class="img-header">
+        </a>
         <span class="text-header">订单详情</span>
     </div>
     <div class="order">
@@ -48,8 +50,8 @@
         </table>
     </div>
     <div class="footer">
-        <a href="/food_store/menu/menu.html" th:href="@{/menu}">
-            <button class="btn red btn-radius font mg-tp-10">返回菜单</button>
+        <a href="/food_store/home/home.html" th:href="@{/}">
+            <button class="btn red btn-radius font mg-tp-10">下单成功，返回首页</button>
         </a>
             <button class="btn black btn-radius font mg-tp-10">登出</button>
     </div>
