@@ -1,0 +1,67 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <title>首页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../css/home.css"  th:href="@{/css/home.css}">
+    <script type="text/javascript" src="../../../js/jquery.js", th:src="@{/js/jquery.js}"></script>
+    <script type="text/javascript" src="../../../js/home.js", th:src="@{/js/home.js}"></script>
+</head>
+<body>
+    <div id="container">
+        <ul id="navigation-list" class="black">
+            <li>
+                <a href="/food_store/home/home.html" th:href="@{/}">
+                    <img src="../../../images/m.jpg" th:src="@{/images/m.jpg}" class="img-header">
+                </a>
+            </li>
+            <li>
+                <a href="/food_store/menu/menu.html" th:href="@{/menu}">
+                    <div class="big-btn black">菜单列表</div>
+                </a>
+            </li>           
+            <li>
+                <a href="/food_store/order/order.html" th:href="@{/order}">
+                    <div class="big-btn black">订单详情</div>
+                </a>
+            </li>
+            <li th:if="${user}" id="logout">
+                    <div class="big-btn black log-out">登出</div>
+            </li>
+        </ul>
+        
+        <div id="slideshow">
+            <img id="bj" class="slide slide-in" src="../../../images/slide-1.jpg" th:src="@{/images/slide-1.jpg}">
+            <img id="gd" class="slide" src="../../../images/slide-2.jpg" th:src="@{/images/slide-2.jpg}">
+            <img id="sc" class="slide" src="../../../images/slide-3.jpg" th:src="@{/images/slide-3.jpg}"> 
+
+            <div id="form-container" th:if="${user} == null">
+                <form id="login-form" name="loginForm" method="post">
+                    <!--<p th-if= "${msg == 'err-nouser'}" id="err-nouser">用户未注册</p>-->
+                    <!--<p th-if= "${msg == 'err-password'}" id="err-password">密码错误</p>-->
+                    <span class="error-msg" th:text=" ${msg}">xzczcx</span>
+                    <!--<span >eeapoirae</span>-->
+                    <input class="input" type="text" id="username" name="username" th:name="username" placeholder="用户名">
+                    <input class="input" type="password" id="password" name="password" th:name="password" placeholder="密码">
+                    <button type="submit" class="btn red btn-radius font mg-10">登录</button>
+                </form>
+            </div>      
+            
+
+            <div id="select">
+                <input class="radio" type="radio" name="city" value="北京" checked="checked" /> 北京
+                <input class="radio" type="radio" name="city" value="广东" /> 广东
+                <input class="radio" type="radio" name="city" value="四川" /> 四川
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="footer">
+        <input id="search" type="text" name="search">
+        <input id="search-bt" type="button" class="btn red btn-radius font" value="查询">
+    </div>
+</body>
+</html>

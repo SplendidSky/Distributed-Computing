@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>您的订单</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/order.css"  th:href="@{/css/order.css}">
+</head>
+<body>
+    <div class="header">
+        <a id="m" href="/food_store/home/home.html" th:href="@{/}">
+            <img src="../../../images/m.jpg" th:src="@{/images/m.jpg}" class="img-header">
+        </a>
+        <span class="text-header">订单详情</span>
+    </div>
+    <!-- <div class="order">
+        <table class="table border-bt-2">
+            <thead>
+                <tr class="border-bt-1">
+                    <th class="order-head">订单</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th class="order-head">总价</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="orderline : ${orderlines}"> -->
+                    <!-- 注：
+                        orders: 已订食物数组;
+                        order {
+                            amout: 该食物数量
+                            food.name:名称
+                            food.cost:价格
+                            food.src:图片相对地址, 如"staple-1.PNG"
+                        }
+                     -->
+                    <!-- <td class="count-column">
+                            <button class="btn black font">数量</button>
+                            <button class="count font" th:text=${orderline.amount}>3</button>
+                    </td>
+                    <td class="picture-column">
+                        <img src="../../../images/staple-1.png" th:src="@{${orderline.food.src}}">
+                    </td>
+                    <td class="description-column" th:text="${orderline.food.name}">
+                        原味板烧鸡腿堡
+                    </td>
+                    <td class="cost-column font-gray">
+                        ￥<span th:text="${orderline.food.cost * orderline.amount}">18.00</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="footer"> -->
+    <div id="menu">
+        <div class="menu">
+            <div class="item" th:each="orderline : ${orderlines}">
+                <img class="item_img" th:src="@{${orderline.getFood().getSrc()}}">
+                <p class="item_name" th:text="${orderline.getFood().getName()}">板烧鸡腿堡</p>
+
+                <span id="vip-block" th:if="${orderline.getFood().getBargain() && user.vip}">vip</span>
+                <span  th:if="${user != null && orderline.getFood().getBargain() && user.vip}" th:text="'￥'+(${orderline.getFood().cost}*0.95)" class="item_name">￥1</span>
+                <span  th:unless="${user != null && orderline.getFood().getBargain() && user.vip}" th:text="'￥'+${orderline.getFood().cost}" class="item_name">￥1</span>
+
+                <div class="item_footer">
+                    <button class="btn black font">数量</button>
+                    <button class="amount count font" th:text="${orderline.getAmount()}">0</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        <!--<a class="btn_success" href="/food_store/home/home.html" th:href="@{/}">-->
+            <!--<button class="btn red btn-radius font mg-tp-10" style="width: 100%">下单成功，返回首页</button>-->
+        <!--</a>-->
+            <!-- <button class="btn black btn-radius font mg-tp-10">登出</button>
+    </div> -->
+</body>
+</html>
