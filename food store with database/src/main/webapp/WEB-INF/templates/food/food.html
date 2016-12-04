@@ -1,0 +1,75 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+	<title>商品详情</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../css/food.css"  th:href="@{/css/food.css}">
+</head>
+<body>
+    <div class="header">
+        <a id="m" href="/food_store/home/home.html" th:href="@{/}">
+            <img src="../../../images/m.jpg" th:src="@{/images/m.jpg}" class="img-header">
+        </a>
+        <span class="text-header">商品详情</span>
+    </div>
+    
+
+    <!-- <div class="order">
+        <table class="table border-bt-2">
+            <thead>
+                <tr class="border-bt-1">
+                    <th class="order-head">当前商品</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th class="order-head">总价</th>
+                </tr>
+            </thead>
+            <tbody>
+                <! 注：
+                    foods: food类数组;
+                    Food: {
+                        name:名字
+                        cost:价格
+                        src:图片相对地址, 如"staple-1.PNG"
+                    }
+                 
+                 
+                    session.user : 当前会话用户
+                 
+                <tr>
+                    <td class="count-column">
+                            <button class="btn black font">数量</button>
+                            <button class="count font">1</button>
+                    </td>
+                    <td class="picture-column">
+                        <img src="../../../images/staple-1.PNG" th:src="@{${food.src}}">
+                    </td>
+                    <td class="description-column" th:text="${food.name}">
+                        原味板烧鸡腿堡
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+
+
+    <div class="details">
+        <div class="pic-name-price">
+            <img class="food-pic" src="../../../images/staple-1.PNG.jpg" th:src="@{${food.src}}">
+            <p class="food-name">原味板烧鸡腿堡</p>
+            <span id="vip-block" th:if="${user != null && food.getBargain() && user.vip}">vip</span>
+            <span  th:if="${user != null && food.getBargain() && user.vip}" th:text="'￥'+(${food.cost}*0.95)" class="item_name">￥1</span>
+            <span  th:unless="${user != null && food.getBargain() && user.vip}" th:text="'￥'+${food.cost}" class="item_name">￥1</span>
+        </div>
+        <div class="introduction">
+            <p>独特的板烧风味，配以柔和的黑椒香气，回味无穷；经过腌制的鸡肉采用煎或烤的方式至熟，其肉质鲜嫩多汁，风味醇香</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <button class="btn black btn-radius font mg-tp-10">返回菜单</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+body {
+    min-height: 600px;
+    font-family: "Flama Condensed Medium", "SimHei", "Microsoft YaHei", "STXihei", "华文细黑", sans-serif;
+    background-color: rgb(243,243,243);
+    margin: 0;
+}
+
+.header {
+    background-color: white;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    box-shadow: 0 5px 5px rgba(102,102,102,.25);
+    z-index: 1;
+}
+
+.img-header {
+    height: 100%;
+    width: 200px;
+}
+
+.text-header {
+    position: absolute;
+    padding: 8px;
+    bottom: 0px;
+    font-size: 2rem;
+}
+
+
+
+
+.details {
+    position: absolute;
+    top: 250px;
+    left: 400px;
+    display: inline-block;
+    width: 650px;
+}
+
+.pic-name-price {
+    position: absolute;
+    left: 0px;
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    vertical-align: text-bottom;
+}
+.food-name {
+    color: red;
+}
+
+.food-price {
+    font-weight: bold;
+}
+
+.introduction {
+    position: absolute;
+    top:30px;
+    height: 150px;
+    right: 0px;
+    color: #000;
+    font-size: 1rem;
+    width: 400px;
+}
+
+
+img {
+    width: 85px;
+    height: 64px;
+}
+
+.btn {
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    color: white;
+    border-color: transparent;
+    border-width: 1px;  
+}
+
+.btn-radius {
+    border-radius: 4px;
+}
+
+.black {
+    background-image: linear-gradient(#525252,#2e2e2e);
+}
+
+.red {
+    background-image: linear-gradient(#ec4c34,#d21920);
+}
+
+.count {
+    width: 40px;
+    height: 35px;
+    line-height: 35px;
+    background-color: white;
+    border: 1px solid #525252;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px -5px 10px rgba(102,102,102,.25);
+    text-align: center;
+}
+
+.font {
+    font-family: "Flama Condensed Medium", "SimHei", "Microsoft YaHei", "STXihei", "华文细黑", sans-serif;
+    font-size: 0.8rem;
+}
+
+.font-gray {
+    color: #9f9f9f;
+    font-size: 1rem;
+}
+
+.vip {
+    background-color: #ec4c34;
+    color: white;
+    font-size: 1rem;
+    padding: 3px;
+    text-align: center;
+}
+
+#vip-block {
+    background-color: #ec4c34;
+    color: white;
+    padding: 3px;
+}
